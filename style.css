@@ -19,8 +19,19 @@ body {
     align-items: center;      
     justify-content: space-between; 
     min-height: 100vh;
-    padding: 0 10%;           
+    padding: 0 10%; 
 }
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 0 10%;                         /* ADD THESE LINES */
+    background-image: linear-gradient(rgba(236, 237, 241, 0.85), rgba(236, 237, 241, 0.85)), url('bg-logo.png');
+    background-size: cover;
+    background-position: center;
+}          
 
 .hero-text {
     flex: 1;                  
