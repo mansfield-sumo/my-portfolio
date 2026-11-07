@@ -15,8 +15,8 @@ A text-based guessing game.
 * **How to run:** Open your terminal and run `python secret_vault.py`.
 
 ### 3. The ATM Simulator (`atm_simulator.py`)
-A simulation of an ATM transaction loop.
-* **Features:** Uses `while` loops to keep the session active and handles user choices until they decide to quit.
+A fully functional command-line ATM interface.
+* **Features:** Features a menu system for checking balance, withdrawing cash, and depositing cash. Uses a `while` loop to keep the session active and includes logic to prevent overdrafts.
 * **How to run:** Open your terminal and run `python atm_simulator.py`.
 
 ## 🌐 Live Portfolio

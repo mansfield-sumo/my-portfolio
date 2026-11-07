@@ -1,3 +1,6 @@
+
+# CALCULATOR
+
 def calculate_numbers():
  
     keep_going = True
@@ -22,7 +25,6 @@ def calculate_numbers():
         elif operation == "/":
            result = num1 / num2
            print(result)
-
 
         answer = input("Do you want to do another calculation? (yes/no): ")
 
