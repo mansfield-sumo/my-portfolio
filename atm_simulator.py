@@ -1,38 +1,49 @@
-#ATM SIMULATION
+# A FUNCTIONAL ATM MACHINE
 
 keep_going = True
-balance = 1000.0  # starting balance
+balance = 1000.0
 
 while keep_going:
-    print("\n===== ATM Menu =====")
+    print("\nHello, valued customer! What would you like to do today?")
+    print("===== ATM Menu =====")
     print("1. Check Balance")
     print("2. Withdraw Cash")
     print("3. Deposit Cash")
     
-    choice = input("\nPlease enter your choice (1/2/3): ")
-    
+    choice = input("\nEnter your selection: ")
+
     if choice == "1":
         print(f"Your current balance is: ${balance:.2f}")
-    elif choice == "2":
-        amount = float(input("Enter withdrawal amount: $"))
-        if amount > 0 and amount <= balance:
-            balance -= amount
-            print(f"Withdrew ${amount:.2f}. New balance: ${balance:.2f}")
-        else:
-            print("Invalid amount. Not enough money or amount must be positive.")
-    elif choice == "3":
-        amount = float(input("Enter deposit amount: $"))
-        if amount > 0:
-            balance += amount
-            print(f"Deposited ${amount:.2f}. New balance: ${balance:.2f}")
-        else:
-            print("Deposit amount must be positive.")
-    else:
-        print("Invalid menu option, try again.")
 
-    # Ask if user wants another transaction
-    again = input("\nDo you want to perform another transaction? (yes/no): ")
-    if again.lower() == "no":
+    elif choice == "2":
+        amount_text = input("Enter withdrawal amount: $")
+        if not amount_text.isdigit():
+            print("Invalid key. Please enter only numbers.")
+        else:
+            amount = int(amount_text)
+            if amount > 0 and amount <= balance:
+                balance -= amount
+                print(f"Withdrew ${amount}. New balance: ${balance:.2f}")
+            else:
+                print("Transaction failed. Insufficient funds.")
+
+    elif choice == "3":
+        amount_text = input("Enter deposit amount: $")
+        if not amount_text.isdigit():
+            print("Invalid key. Please enter only numbers.")
+        else:
+            amount = int(amount_text)
+            if amount > 0:
+                balance += amount
+                print(f"Deposited ${amount}. New balance: ${balance:.2f}")
+            else:
+                print("Invalid deposit amount.")
+
+    else:
+        print("Invalid selection, please try again.")
+
+    again = input("\nPress 1 for another transaction, press 0 to exit: ")
+    if again == "0":
         keep_going = False
 
 print("\nATM session ended. Thank you!")
