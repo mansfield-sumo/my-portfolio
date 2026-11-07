@@ -28,7 +28,7 @@ body {
     justify-content: space-between;
     min-height: 100vh;
     padding: 0 10%;                         /* ADD THESE LINES */
-    background-image: linear-gradient(rgba(236, 237, 241, 0.85), rgba(236, 237, 241, 0.85)), url('logo.JPEG');
+    background-image: linear-gradient(rgba(236, 237, 241, 0.85), rgba(236, 237, 241, 0.85)), url('logo.jpeg');
     background-size: cover;
     background-position: center;
 }          
