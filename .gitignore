@@ -1,0 +1,6 @@
+build/
+dist/
+__pycache__/
+*.spec
+receipts.txt
+temp_receipt_to_print.txt

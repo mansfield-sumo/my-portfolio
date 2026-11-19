@@ -28,3 +28,24 @@ You can view my live portfolio website here:
 * **HTML5** (Structure)
 * **CSS3** (Styling, Flexbox, Responsive Design)
 * **Git & GitHub** (Version Control)
+
+### 4. # Freeport Tax Terminal
+A standalone Windows application for calculating and recording port taxes for rice shipments.
+
+## Features
+- Secure Admin PIN login.
+- Dynamic tax rate setting.
+- Automatic bulk discount tiers (5,000+ bags and 10,000+ bags).
+- Generates and saves printable receipts.
+- Search previous receipts by Merchant ID.
+- View daily revenue summaries.
+
+## How to Run
+1. Download the `gui_app.exe` from the [Releases](#) page.
+2. Double-click to run. (Note: Default PIN is 2026).
+
+## Developer Setup
+If you want to run the source code:
+```bash
+pip install pyinstaller
+python gui_app.py
